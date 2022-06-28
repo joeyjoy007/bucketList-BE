@@ -7,7 +7,8 @@ export interface userInterface{
     email:string
     password:string
     type:string
-    profilePic:string
+    profilePic:string,
+    myWish:Types.ObjectId
 }
 
 export interface IUserModel extends Document,userInterface{

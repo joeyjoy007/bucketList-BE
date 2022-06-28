@@ -15,6 +15,10 @@ const userSchema:Schema = new Schema({
     password:{type:String},
     type:{type:String},
     profilePic:{type:String},
+    myWish:[{
+        type:Types.ObjectId,
+        ref:"Bucket"
+    }]
 
 },
 {timestamps:true},

@@ -3,12 +3,13 @@ import { IBucketList } from "./buckeInterface";
 
 const bucketSchema:Schema = new Schema({
     wishName:{type:String},
-    isDone:{type:Boolean},
-    isActive:{type:Boolean},
-    parent:[{
-        type:Types.ObjectId,
-        ref:"User"
-    }],
+    isDone:{type:Boolean,default:false},
+    isActive:{type:Boolean,default:false},
+    // parent:[{
+    //     type:Types.ObjectId,
+    //     ref:"User"
+    // }],
+    parent:{type:Types.ObjectId},
     isDoneBy:[{
         type:Types.ObjectId,
         ref:"Father"
@@ -18,4 +19,4 @@ const bucketSchema:Schema = new Schema({
     timestamps:true
 },)
 
-export const bucketModel:Model<IBucketList> = model<IBucketList>('Bucket',bucketSchema)
+export const BucketModel:Model<IBucketList> = model<IBucketList>('Bucket',bucketSchema)
