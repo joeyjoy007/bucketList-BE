@@ -14,5 +14,5 @@ const fatherSchema:Schema = new Schema({
     }],
     caste:{type:String}
 
-})
+},{timestamps:true},)
 export const Father:Model<IFather> = model<IFather>('Father',fatherSchema)
